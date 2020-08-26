@@ -1,6 +1,6 @@
 # About タスクエ
 
-https://タスクエ.com のアプリについての概要紹介用リポジトリ（コード公開前のため）
+https://タスクエ.com のアプリについての概要紹介用リポジトリ（バグ・Secrets等問題ないか確認前で、コード公開準備中のため）
 
 ![ロゴ](https://storage.googleapis.com/studio-design-assets/projects/BRO3b2J0WD/s-512x512_webp_036c31e0-c802-4efa-98eb-de71d88b1542.webp)
 
@@ -18,6 +18,7 @@ https://タスクエ.com のアプリについての概要紹介用リポジト�
   - Firebase Auth
   - Firestore
   - Firebase Hosting
+- AVA（まだ一つも書けていない）
 
 ## アセット系
 - Fortawesome
@@ -33,3 +34,66 @@ https://タスクエ.com のアプリについての概要紹介用リポジト�
 - [メンタリストDaiGoさん](https://twitter.com/Mentalist_DaiGo)が解説していたゲーミフィケーションについての[論文解説・考察動画](https://www.nicovideo.jp/watch/so37088143)
   - 上記をベースに、自分がシュミレーションゲームが好きなのでポイントを「貯める」というエッセンスを追加してベースを作成
 
+# ディレクトリ構成
+
+## Pages
+
+```
+pages
+├── account.vue
+├── base-quest.vue
+├── config.vue
+├── index.vue
+├── punishment-game.vue
+├── reward.vue
+└── today.vue
+```
+
+## Component
+```
+components
+├── atoms
+│   └── headerMenuItem.vue
+├── molecules
+│   ├── dialogButton.vue
+│   ├── diceShuffleButton.vue
+│   ├── questFormRow.vue
+│   ├── signpost.vue
+│   └── topCardUserData.vue
+└── organisms
+    ├── accountMenu.vue
+    ├── configOfBaseQuests.vue
+    ├── configOfPunishmentGames.vue
+    ├── configOfRewards.vue
+    ├── configTemplates.vue
+    ├── dialog.vue
+    ├── dialogForm.vue
+    ├── dice.vue
+    ├── formDialog.vue
+    ├── header.vue
+    ├── table.vue
+    └── todayQuestForm.vue
+```
+
+## Store
+
+```
+store
+├── account.js
+├── actionLog.js
+├── config.js
+├── index.js
+├── points.js
+├── punishment.js
+└── today.js
+```
+
+## Plugin
+
+```
+plugins
+├── dialog.js
+├── firebase.js
+├── font-awesome.js
+└── vee-validate.js
+```
